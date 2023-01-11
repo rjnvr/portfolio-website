@@ -8,7 +8,7 @@
     width: 350px;
     border-radius: 1.5rem;
     justify-self: center;
-    margin-bottom: auto;
+    margin-bottom: 7rem;
 }
 
 .about__info {
@@ -51,15 +51,16 @@
 @media screen and (max-width: 992px) {
     .about__container {
         grid-template-columns: 1fr;
-        row-gap: 2.5rem;
+        row-gap: 1rem;
     }
 
     .about__img {
-        width: 220px;
+        width: 35%;
+        margin-bottom: 2rem;
     }
 
     .about__box {
-        padding: 0.75rem 0.5rem;
+        padding: 2rem 2rem;
     }
 
     .about__data {
@@ -73,14 +74,20 @@
     .about__description {
         padding: 0 5rem;
         margin-bottom: 2rem;
+    
     }
   }
   
   /* For medium devices */
   
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 912px) {
     .about__info {
         grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .about__img {
+        width: 35%;
+        margin-bottom: 2rem;
     }
 
     .about__description {
@@ -92,7 +99,7 @@
   /* For small devices */
   @media screen and (max-width: 350px) {
     .about__info {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     
   }

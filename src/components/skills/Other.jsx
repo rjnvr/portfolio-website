@@ -54,13 +54,7 @@ const Other = () => {
                     </div>
                 
 
-                <div className="skills__data">
-                <i class='bx bxl-docker newicons' ></i>
-                <div>
-                    <h3 className="skills__name">Docker</h3>
-                    <span className="skills__level"></span>
-                </div>
-                </div>
+                
 
 
         </div>

@@ -75,7 +75,9 @@ const Services = () => {
               <i onClick={() => toggleTab(0)} className="uil uil-times services__modal-close"></i>
 
               <h3 className="services__modal-title">Weather App</h3>
+              <div className='image-div'>
               <img src={weather1} className="image" alt="screenshot of project"></img>
+              </div>
               <p className="services__modal-description">A weather app made using React.js Javascript and Tailwind CSS/HTML with openWeatherMap's API</p>
 
               <ul className="services__modal-services grid">
@@ -114,7 +116,9 @@ const Services = () => {
               <i onClick={() => toggleTab(0)} className="uil uil-times services__modal-close"></i>
 
               <h3 className="services__modal-title">Pokédex App</h3>
+              <div className='image-div'>
               <img src={poke1} className="image" alt="screenshot of project"></img>
+              </div>
               <p className="services__modal-description">A pokemon search app made using React.js Javascript HTML/CSS with Poke API</p>
 
               <ul className="services__modal-services grid">

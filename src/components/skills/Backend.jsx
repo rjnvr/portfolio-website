@@ -17,7 +17,7 @@ const Backend = () => {
                     </div>
 
                     <div className="skills__data">
-                    <i class='bx bx-badge-check newicons'></i>
+                    <i class='bx bx-math'></i>
 
                     <div>
                         <h3 className="skills__name">Pandas/Numpy</h3>
