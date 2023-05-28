@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+![alt text](https://github.com/rjnvr/portfolio-website/blob/main/portfoliowebsite.gif)
+
+
+# How to Start the Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
