@@ -3,19 +3,20 @@ import './about.css';
 import AboutImg from "../../assets/comp2.gif";
 import CV from "../../assets/Arjunvir_Sidhu_Resume-Update.pdf";
 import Info from './Info'
+import Info2 from './Info2';
 
 const About = () => {
   return (
     <section className="about section" id="about">
         <h2 className="section__title">About Me</h2>
-        <span className="section__subtitle">My Non-Technical Work Experience</span>
+        <span className="section__subtitle">My Work Experience</span>
 
         <div className="about__container container grid">
             <img src={AboutImg} alt="" className="about__img" />
-
+            <Info />
+            <img src={AboutImg} alt="" className="about__img" />
             <div className="about__data">
-                <Info />
-
+              <Info2 />
                 <p className="about__description"></p>
 
                 <a download="" href={CV} className="button button--flex">Download Resume 
