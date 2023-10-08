@@ -39,24 +39,27 @@ const Other = () => {
             <i class='bx bxs-clinic newicons' ></i>
 
                 <div>
-                    <h3 className="skills__name">Valgrind</h3>
+                    <h3 className="skills__name">Informatica Developer</h3>
                     <span className="skills__level"></span>
                 </div>
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bxs-file newicons' ></i>
+                <i class='bx bxl-dev-to newicons' ></i>
 
                     <div>
-                        <h3 className="skills__name">Makefile</h3>
+                        <h3 className="skills__name">Azure DevOps</h3>
                         <span className="skills__level"></span>
                     </div>
                     </div>
                 
+                    <i class='bx bxs-data newicons' ></i>
 
+                    <div>
+                        <h3 className="skills__name">SQL Server Management</h3>
+                        <span className="skills__level"></span>
+                    </div>
                 
-
-
         </div>
     </div>
 </div>

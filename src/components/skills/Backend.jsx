@@ -47,19 +47,19 @@ const Backend = () => {
                     </div>
 
                     <div className="skills__data">
-                    <i class='bx bx-wind newicons' ></i>
+                    <i class='bx bxl-nodejs newicons'></i>
 
                     <div>
-                        <h3 className="skills__name">Axios</h3>
+                        <h3 className="skills__name">Node.js</h3>
                         <span className="skills__level"></span>
                     </div>
                     </div>
 
                     <div className="skills__data">
-                    <i class='bx bxs-baguette newicons' ></i>
+                    <i class='bx bxl-jquery newicons' ></i>
 
                     <div>
-                        <h3 className="skills__name">React-Toastify</h3>
+                        <h3 className="skills__name">jQuery</h3>
                         <span className="skills__level"></span>
                     </div>
                     </div>
