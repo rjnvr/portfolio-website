@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from '@iconify/react';
 
 const Other = () => {
   return (
@@ -8,7 +9,7 @@ const Other = () => {
     <div className="skills__box">
         <div className="skills__group">
             <div className="skills__data">
-                <i class='bx bx-badge-check newicons'></i>
+                <Icon icon="material-symbols:api" />
 
                 <div>
                     <h3 className="skills__name">APIs</h3>
@@ -36,16 +37,16 @@ const Other = () => {
 
         <div className="skills__group">
             <div className="skills__data">
-            <i class='bx bxs-clinic newicons' ></i>
+            <Icon icon="devicon:azure" />
 
                 <div>
-                    <h3 className="skills__name">Informatica Developer</h3>
+                    <h3 className="skills__name">Azure AI Studio</h3>
                     <span className="skills__level"></span>
                 </div>
                 </div>
 
                 <div className="skills__data">
-                <i class='bx bxl-dev-to newicons' ></i>
+                <Icon icon="devicon:azuredevops" />
 
                     <div>
                         <h3 className="skills__name">Azure DevOps</h3>
@@ -53,10 +54,10 @@ const Other = () => {
                     </div>
                     </div>
                 
-                    <i class='bx bxs-data newicons' ></i>
+                    <Icon icon="vscode-icons:file-type-sql" />
 
                     <div>
-                        <h3 className="skills__name">SQL Server Management</h3>
+                        <h3 className="skills__name">SQL Server Management Studio</h3>
                         <span className="skills__level"></span>
                     </div>
                 

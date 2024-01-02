@@ -29,9 +29,13 @@ provided continuous user-experience improvement suggestions to developers</p>
         <div className="about__box">
           <i class='bx bxs-certification bx-tada about__icon' ></i>
           <h3 className="services__modal-title">Certifications</h3>
-            <h3 className="about__title">Google Data Analytics Professional Certificate</h3>
+          <h3 className="about__title">
+            <a href="https://coursera.org/share/0e2a9076501332e8fa429151dc78b3b8" target="_blank" rel="noopener noreferrer">
+                Google Data Analytics Professional Certificate
+            </a>
+          </h3>
             <i class='bx bxl-google' ></i>
-            <p className="services__modal-description">May 2023 - Oct 2023</p>
+            <p className="services__modal-description">Jul 2023 - Dec 2023</p>
               <li className="services__modal-service">
               <i class='bx bxs-check-square' ></i>
                   <p className="services__modal-info">Improved critical and analytical thinking using tools such as R, Tableau, and relational databases</p>

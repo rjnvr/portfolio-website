@@ -1,18 +1,20 @@
 .about__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 4rem;
+    display: grid;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    gap: 2rem;               /* Adjust gap as needed */
 }
 
+
 .about__img {
-    width: 550px;
+    width: 450px;
     border-radius: 1.5rem;
     justify-self: center;
     margin-bottom: 6rem;
 }
 
 .about__info {
-    grid-template-columns: repeat(1, 600px);
+    grid-template-columns: repeat(1, 800px);
     gap: 0.5rem;
     margin-bottom: var(--mb-2);
 }
@@ -22,7 +24,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.75rem;
     text-align: center;
-    padding: 1rem 1.25rem;
+    padding: 2rem 2.25rem;
 }
 
 .about__icon {
@@ -105,4 +107,27 @@
     
   }
   
+  
+  .about__video {
+    width: 100%;
+    height: auto;
+    max-width: 750px; /* Adjust this value based on your layout */
+    border-radius: 1.5rem; /* Optional, for rounded corners */
+    margin-bottom: 2rem; /* Spacing below the video */
+  }
+  
+  
+  .about__video-description {
+    display: block;       /* Makes the text behave like a block element */
+    text-align: center;   /* Centers the text */
+    margin-top: 1rem;     /* Space above the description */
+    color: #666;          /* Adjust the color as needed */
+    font-size: 0.9rem;    /* Smaller font size */
+  }
+  
+  .about__video-container {
+    display: flex;        /* Using flex to stack items vertically */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;  /* Center items horizontally */
+  }
   

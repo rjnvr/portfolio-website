@@ -1,4 +1,5 @@
 import React from 'react'
+import { Icon } from '@iconify/react';
 
 const Backend = () => {
   return (
@@ -17,7 +18,7 @@ const Backend = () => {
                     </div>
 
                     <div className="skills__data">
-                    <i class='bx bx-math'></i>
+                    <Icon icon="logos:pandas-icon" />
 
                     <div>
                         <h3 className="skills__name">Pandas/Numpy</h3>
@@ -60,6 +61,15 @@ const Backend = () => {
 
                     <div>
                         <h3 className="skills__name">jQuery</h3>
+                        <span className="skills__level"></span>
+                    </div>
+                    </div>
+
+                    <div className="skills__data">
+                    <Icon icon="logos:streamlit" />
+
+                    <div>
+                        <h3 className="skills__name">Streamlit</h3>
                         <span className="skills__level"></span>
                     </div>
                     </div>

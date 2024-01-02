@@ -66,11 +66,11 @@ for each strategy</p>
             <div className="services__modal-content">
               <i onClick={() => toggleTab(0)} className="uil uil-times services__modal-close"></i>
 
-              <h3 className="services__modal-title">Option Pricer</h3>
+              <h3 className="services__modal-title"><a href="https://option-pricer.streamlit.app">Option Pricer</a></h3>
               <div className='image-div'>
               <img src={options1} className="image" alt="screenshot of project"></img>
               </div>
-              <p className="services__modal-description">Python, NumPy, SciPy (2023)</p>
+              <p className="services__modal-description">Python, NumPy, SciPy, Streamlit (2023)</p>
 
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
@@ -90,6 +90,7 @@ interest rate, resulting in highly accurate and reliable pricing predictions</p>
                   </i>
                   <p className="services__modal-info"><a href="https://github.com/rjnvr/option-pricer">Source Code</a></p>
                 </li>
+                
               </ul>
             </div>
           </div>

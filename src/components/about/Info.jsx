@@ -14,20 +14,27 @@ const Info = () => {
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i class='bx bxs-check-square' ></i>
-                  <p className="services__modal-info">Creating a Full-Stack Application designed to simplify the Business Analysis process by converting plain text into
-SQL queries & automating data visualizations with a goal of boosting user base by 200%, resulting in
-the replacement of IBM Cognos Analytics</p>
+                  <p className="services__modal-info">Developed a Chat Application in Python for business analysis, featuring automated data retrieval (CSVs) and
+visualizations, targeting a 150% increase in user base</p>
                 </li>
 
                 <li className="services__modal-service">
                   <i class='bx bxs-check-square' ></i>
-                  <p className="services__modal-info">Created the Query Generator & Metadata structure for the Text-To-SQL application using SQL stored
-procedures, scalar-value & table-value functions</p>
+                  <p className="services__modal-info">Implemented Azure OpenAI’s API for NLP to automate the conversion of text to SQL queries & text to
+visualization code, connected to PostgreSQL server to fetch data</p>
                 </li>
                 <li className="services__modal-service">
                   <i class='bx bxs-check-square' ></i>
-                  <p className="services__modal-info">Performed ETL operations such as Data Profiling, Transformation (Mapping & Expression writing) using
-Informatica Developer with the Data Quality & Reporting team for Vehicle and Financial data</p>
+                  <p className="services__modal-info">Presented the application to shareholders and management, securing API key & budget for the team</p>
+                </li>
+                <li className="services__modal-service">
+                  <i class='bx bxs-check-square' ></i>
+                  <p className="services__modal-info">Engineered AI system prompts & optimized API costs by allowing user to enable/disable chat history</p>
+                </li>
+                <li className="services__modal-service">
+                  <i class='bx bxs-check-square' ></i>
+                  <p className="services__modal-info">Developed comprehensive knowledge transfer documents and project recommendations to facilitate a smooth
+transition for the team and push the project to production</p>
                 </li>
             </ul>              
           

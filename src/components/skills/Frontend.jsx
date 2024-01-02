@@ -53,14 +53,6 @@ const Frontend = () => {
                         <span className="skills__level"></span>
                     </div>
                     </div>
-                    <div className="skills__data">
-                    <i class='bx bxs-color newicons'></i>
-
-                    <div>
-                        <h3 className="skills__name">C#</h3>
-                        <span className="skills__level"></span>
-                    </div>
-                    </div>
 
             </div>
         </div>

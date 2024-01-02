@@ -2,9 +2,10 @@ import React from 'react';
 import './about.css';
 import AboutImg from "../../assets/comp2.gif";
 import MtoImg from "../../assets/mto2.gif";
-import CV from "../../assets/arjunvir_resume.pdf";
+import CV from "../../assets/Arjunvir_Resume.pdf";
 import Info from './Info'
 import Info2 from './Info2';
+import AbiEmployeesVideo from "../../assets/ABI_Employees_test.mp4"
 
 const About = () => {
   return (
@@ -13,13 +14,25 @@ const About = () => {
         <span className="section__subtitle">My Work Experience</span>
 
         <div className="about__container container grid">
-            <img src={MtoImg} alt="" className="about__img" />
             <Info />
-            <img src={AboutImg} alt="" className="about__img" />
+            <div className="about__video-container">
+            <video className="about__video" controls>
+              <source src={AbiEmployeesVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <a href="#" className="about__video-description">
+              Demo of the Chat App Project.
+              </a>
+              <a href="#" className="about__video-description">
+              Note: This is a test version of the application and does not contain all the features of the final product.
+            </a>
+          </div>
+
+
+            
             <div className="about__data">
               <Info2 />
                 <p className="about__description"></p>
-
                 <a download="" href={CV} className="button button--flex">Download Resume 
                 <svg
                 class="button__icon"
@@ -48,6 +61,7 @@ const About = () => {
               </svg></a>
             </div>
         </div>
+        
     </section>
   )
 }
