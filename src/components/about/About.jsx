@@ -2,7 +2,7 @@ import React from 'react';
 import './about.css';
 import AboutImg from "../../assets/comp2.gif";
 import MtoImg from "../../assets/mto2.gif";
-import CV from "../../assets/Arjunvir_Resume.pdf";
+import CV from "../../assets/Arjunvir_Sidhu_Resume.pdf";
 import Info from './Info'
 import Info2 from './Info2';
 import AbiEmployeesVideo from "../../assets/ABI_Employees_test.mp4"
