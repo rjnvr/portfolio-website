@@ -12,7 +12,7 @@ const Coop3 = () => {
         <p className="coop__meta">Automation Developer / Solutions Engineer (Consulting Focus)</p>
       </div>
 
-      <button className="coop__button" onClick={() => setToggleState(1)}>
+      <button className="coop__button" onClick={(e) => { e.stopPropagation(); setToggleState(1); }}>
         View Report
         <i className="uil uil-arrow-right coop__button-icon"></i>
       </button>

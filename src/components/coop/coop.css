@@ -14,8 +14,8 @@
   border-radius: 1.1rem;
   padding: 2rem 1.6rem;
   box-shadow: var(--card-shadow);
-  overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  overflow: visible;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .coop__card::before {
@@ -29,8 +29,8 @@
 }
 
 .coop__card:hover {
-  transform: translateY(-5px);
   border-color: rgba(53, 86, 61, 0.38);
+  box-shadow: 0 22px 48px rgba(52, 61, 42, 0.14);
 }
 
 .coop__icon {
@@ -83,32 +83,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: 0.2s;
 }
 
 .coop__modal-content {
-  width: min(1200px, 96vw);
-  height: 88vh;
+  width: min(1320px, 94vw);
+  height: min(90vh, 980px);
   position: relative;
   background: var(--surface-color);
   border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  padding: 3rem 2rem 2rem;
+  border-radius: 1.25rem;
+  padding: 3.75rem 2.5rem 2.5rem;
   overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(16, 24, 19, 0.32);
 }
 
 .coop__modal-close {
   position: sticky;
-  top: 0;
-  float: right;
+  top: 0.75rem;
+  z-index: 3;
+  margin-left: auto;
+  margin-bottom: -42px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
   font-size: 1.6rem;
   color: var(--title-color);
   cursor: pointer;
-  background: var(--surface-color);
-  border-radius: 0.4rem;
+  background: rgba(226, 235, 214, 0.72);
+  border-radius: 50%;
 }
 
 .coop__modal-title,
@@ -203,6 +211,7 @@
 .active-modal {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 @media screen and (max-width: 992px) {
