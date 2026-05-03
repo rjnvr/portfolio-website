@@ -1,6 +1,6 @@
 .footer {
-    background-color: var(--container-color);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(34, 48, 36, 0.95);
+    border-top: 1px solid rgba(255, 250, 240, 0.1);
 }
 
 .footer__container {
@@ -9,7 +9,7 @@
 
 .footer__title,
 .footer__link {
-    color: var(--title-color);
+    color: #f8f1e2;
 }
 
 .footer__title {
@@ -18,7 +18,7 @@
 }
 
 .footer__link:hover {
-    color: var(--title-color-dark);
+    color: var(--accent-soft);
 }
 
 .footer__list {

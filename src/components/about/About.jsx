@@ -1,69 +1,125 @@
 import React from 'react';
 import './about.css';
-import AboutImg from "../../assets/comp2.gif";
-import MtoImg from "../../assets/mto2.gif";
-import CV from "../../assets/Arjunvir_Sidhu_Resume.pdf";
-import Info from './Info'
-import Info2 from './Info2';
-import AbiEmployeesVideo from "../../assets/ABI_Employees_test.mp4"
+import CV from '../../assets/Arjun_Sidhu_Resume_2026grad.pdf';
+import AbiEmployeesVideo from '../../assets/ABI_Employees_test.mp4';
+
+const workExperience = [
+  {
+    role: 'Automation Developer / Solutions Engineer (Co-op)',
+    org: 'MPBSDP',
+    date: 'Jan 2025 - Aug 2025',
+    bullets: [
+      'Led client discovery sessions to identify automation opportunities.',
+      'Built Power Apps, Power Automate, and SharePoint workflows for internal teams.',
+      'Developed enterprise apps that centralized intake and reporting.',
+      'Delivered end-to-end automations that reduced manual processing.'
+    ]
+  },
+  {
+    role: 'Automation Developer (Co-op)',
+    org: 'Ontario Ministry of Transportation (MTO)',
+    date: 'May 2024 - Aug 2024',
+    bullets: [
+      'Mapped business processes and designed Power Automate workflows.',
+      'Built Power Apps forms with SharePoint-integrated approvals.',
+      'Prototyped Power Platform solutions for digital transformation projects.'
+    ]
+  },
+  {
+    role: 'Junior Technical Analyst (Co-op)',
+    org: 'Ontario Ministry of Transportation (MTO)',
+    date: 'Sep 2023 - Dec 2023',
+    bullets: [
+      'Built a Python analytics assistant for natural-language data queries.',
+      'Implemented Azure OpenAI text-to-SQL for PostgreSQL reporting.',
+      'Secured project API budget through leadership presentations.',
+      'Improved output quality with prompt-engineering and model tuning.'
+    ]
+  }
+];
 
 const About = () => {
   return (
     <section className="about section" id="about">
-        <h2 className="section__title">About Me</h2>
-        <span className="section__subtitle">My Work Experience</span>
+      <h2 className="section__title">About Me</h2>
+      <span className="section__subtitle">Work Experience</span>
 
-        <div className="about__container container grid">
-            <Info />
-            <div className="about__video-container">
-            <video className="about__video" controls>
-              <source src={AbiEmployeesVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <a href="#" className="about__video-description">
-              Demo of the Chat App Project.
-              </a>
-              <a href="#" className="about__video-description">
-              Note: This is a test version of the application and does not contain all the features of the final product.
-            </a>
-          </div>
-
-
-            
-            <div className="about__data">
-              <Info2 />
-                <p className="about__description"></p>
-                <a download="" href={CV} className="button button--flex">Download Resume 
-                <svg
-                class="button__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M15.25 22.7502H9.25C3.82 22.7502 1.5 20.4302 1.5 15.0002V9.00024C1.5 3.57024 3.82 1.25024 9.25 1.25024H14.25C14.66 1.25024 15 1.59024 15 2.00024C15 2.41024 14.66 2.75024 14.25 2.75024H9.25C4.64 2.75024 3 4.39024 3 9.00024V15.0002C3 19.6102 4.64 21.2502 9.25 21.2502H15.25C19.86 21.2502 21.5 19.6102 21.5 15.0002V10.0002C21.5 9.59024 21.84 9.25024 22.25 9.25024C22.66 9.25024 23 9.59024 23 10.0002V15.0002C23 20.4302 20.68 22.7502 15.25 22.7502Z"
-                  fill="var(--container-color)"
-                ></path>
-                <path
-                  d="M22.25 10.7502H18.25C14.83 10.7502 13.5 9.42023 13.5 6.00023V2.00023C13.5 1.70023 13.68 1.42023 13.96 1.31023C14.24 1.19023 14.56 1.26023 14.78 1.47023L22.78 9.47023C22.99 9.68023 23.06 10.0102 22.94 10.2902C22.82 10.5702 22.55 10.7502 22.25 10.7502ZM15 3.81023V6.00023C15 8.58023 15.67 9.25023 18.25 9.25023H20.44L15 3.81023Z"
-                  fill="var(--container-color)"
-                ></path>
-                <path
-                  d="M13.25 13.7502H7.25C6.84 13.7502 6.5 13.4102 6.5 13.0002C6.5 12.5902 6.84 12.2502 7.25 12.2502H13.25C13.66 12.2502 14 12.5902 14 13.0002C14 13.4102 13.66 13.7502 13.25 13.7502Z"
-                  fill="var(--container-color)"
-                ></path>
-                <path
-                  d="M11.25 17.7502H7.25C6.84 17.7502 6.5 17.4102 6.5 17.0002C6.5 16.5902 6.84 16.2502 7.25 16.2502H11.25C11.66 16.2502 12 16.5902 12 17.0002C12 17.4102 11.66 17.7502 11.25 17.7502Z"
-                  fill="var(--container-color)"
-                ></path>
-              </svg></a>
-            </div>
+      <div className="about__container container">
+        <div className="about__work grid">
+          {workExperience.map((item) => (
+            <article className="about__card" key={`${item.role}-${item.date}`}>
+              <h3 className="about__card-title">{item.role}</h3>
+              <p className="about__card-subtitle">{item.org}</p>
+              <p className="about__card-subtitle">{item.date}</p>
+              <ul className="about__list">
+                {item.bullets.map((bullet) => (
+                  <li className="about__list-item" key={bullet}>
+                    <i className="uil uil-check-circle about__list-icon"></i>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
-        
-    </section>
-  )
-}
 
-export default About
+        <div className="about__video-container">
+          <h3 className="about__card-title">2023 Analytics Assistant Demo</h3>
+          <video className="about__video" controls>
+            <source src={AbiEmployeesVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="about__video-description">2023 analytics assistant demo (test build).</p>
+        </div>
+
+        <div className="about__actions">
+          <a href={CV} target="_blank" rel="noreferrer" className="button button--flex">
+            View Resume (2026)
+            <svg
+              className="button__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M15.25 22.7502H9.25C3.82 22.7502 1.5 20.4302 1.5 15.0002V9.00024C1.5 3.57024 3.82 1.25024 9.25 1.25024H14.25C14.66 1.25024 15 1.59024 15 2.00024C15 2.41024 14.66 2.75024 14.25 2.75024H9.25C4.64 2.75024 3 4.39024 3 9.00024V15.0002C3 19.6102 4.64 21.2502 9.25 21.2502H15.25C19.86 21.2502 21.5 19.6102 21.5 15.0002V10.0002C21.5 9.59024 21.84 9.25024 22.25 9.25024C22.66 9.25024 23 9.59024 23 10.0002V15.0002C23 20.4302 20.68 22.7502 15.25 22.7502Z"
+                fill="var(--container-color)"
+              ></path>
+              <path
+                d="M22.25 10.7502H18.25C14.83 10.7502 13.5 9.42023 13.5 6.00023V2.00023C13.5 1.70023 13.68 1.42023 13.96 1.31023C14.24 1.19023 14.56 1.26023 14.78 1.47023L22.78 9.47023C22.99 9.68023 23.06 10.0102 22.94 10.2902C22.82 10.5702 22.55 10.7502 22.25 10.7502ZM15 3.81023V6.00023C15 8.58023 15.67 9.25023 18.25 9.25023H20.44L15 3.81023Z"
+                fill="var(--container-color)"
+              ></path>
+              <path
+                d="M13.25 13.7502H7.25C6.84 13.7502 6.5 13.4102 6.5 13.0002C6.5 12.5902 6.84 12.2502 7.25 12.2502H13.25C13.66 12.2502 14 12.5902 14 13.0002C14 13.4102 13.66 13.7502 13.25 13.7502Z"
+                fill="var(--container-color)"
+              ></path>
+              <path
+                d="M11.25 17.7502H7.25C6.84 17.7502 6.5 17.4102 6.5 17.0002C6.5 16.5902 6.84 16.2502 7.25 16.2502H11.25C11.66 16.2502 12 16.5902 12 17.0002C12 17.4102 11.66 17.7502 11.25 17.7502Z"
+                fill="var(--container-color)"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div className="about__cert">
+          <article className="about__card">
+            <h3 className="about__card-title">Google Data Analytics Professional Certificate</h3>
+            <p className="about__card-subtitle">Google / Coursera</p>
+            <a
+              href="https://coursera.org/share/0e2a9076501332e8fa429151dc78b3b8"
+              target="_blank"
+              rel="noreferrer"
+              className="about__cert-link"
+            >
+              View Certificate
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;

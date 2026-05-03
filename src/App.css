@@ -1,25 +1,26 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  --title-color: #223024;
+  --title-color-dark: #101813;
+  --text-color: #65705d;
+  --muted-color: #8d927e;
+  --body-color: #f4efe3;
+  --container-color: rgba(255, 252, 244, 0.88);
+  --surface-color: #fffaf0;
+  --accent-color: #6f8f5b;
+  --accent-dark: #35563d;
+  --accent-soft: #e2ebd6;
+  --earth-color: #a9815d;
+  --border-color: rgba(65, 77, 55, 0.16);
+  --card-shadow: 0 18px 45px rgba(52, 61, 42, 0.1);
 
-  /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --title-font: "Newsreader", serif;
 
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --big-font-size: 3.5rem;
+  --big-font-size: 4.2rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
@@ -28,13 +29,10 @@
   --smaller-font-size: 0.813rem;
   --tiny-font-size: 0.625rem;
 
-  /*========== Font weight ==========*/
   --font-normal: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== Margins Bottom ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -44,13 +42,11 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
     --big-font-size: 2.75rem;
@@ -63,7 +59,6 @@
   }
 }
 
-/*=============== BASE ===============*/
 * {
   margin: 0;
   padding: 0;
@@ -85,13 +80,23 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  background-image:
+    linear-gradient(rgba(53, 86, 61, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 86, 61, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 18% 12%, rgba(147, 166, 111, 0.28), transparent 28%),
+    radial-gradient(circle at 82% 8%, rgba(169, 129, 93, 0.18), transparent 26%),
+    linear-gradient(180deg, #f8f1e2 0%, #eff3e8 48%, #f7efe2 100%);
+  background-attachment: fixed;
+  background-size: 34px 34px, 34px 34px, auto, auto, auto;
 }
 
 h1,
 h2,
 h3 {
   color: var(--title-color);
+  font-family: var(--title-font);
   font-weight: var(--font-semi-bold);
+  letter-spacing: 0;
 }
 
 ul {
@@ -113,20 +118,23 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+  padding: 7rem 0 2.5rem;
 }
 
 .section__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
+  position: relative;
 }
 
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted-color);
 }
 
 .section__title,
@@ -134,9 +142,8 @@ img {
   text-align: center;
 }
 
-/*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -146,18 +153,21 @@ img {
   gap: 1.5rem;
 }
 
-/*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
+  background: var(--accent-dark);
+  color: #fff;
+  padding: 1.05rem 1.55rem;
+  border-radius: 999px;
+  font-weight: var(--font-semi-bold);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 14px 28px rgba(53, 86, 61, 0.2);
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  transform: translateY(-2px);
+  background: var(--title-color);
+  box-shadow: 0 18px 34px rgba(53, 86, 61, 0.24);
 }
 
 .button__icon {
@@ -169,8 +179,6 @@ img {
   align-items: center;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
 @media screen and (max-width: 992px) {
   .container {
     margin-left: var(--mb-1-5);
@@ -187,11 +195,11 @@ img {
   }
 }
 
-/* For medium devices */
 @media screen and (max-width: 768px) {
   body {
     margin: 0 0 var(--header-height) 0;
   }
+
   .section {
     padding: 2rem 0 4rem;
   }
@@ -199,15 +207,9 @@ img {
   .section__subtitle {
     margin-bottom: var(--mb-3);
   }
- 
 }
 
-@media screen and (max-width: 576px) {
-}
-
-/* For small devices */
 @media screen and (max-width: 350px) {
-
   :root {
     --big-font-size: 2.25rem;
   }
@@ -216,6 +218,4 @@ img {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
-
-
 }

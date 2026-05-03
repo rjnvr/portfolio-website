@@ -37,13 +37,13 @@ const Contact = () => {
                         <h3 className="contact__card-title">Text/Phone</h3>
                         <span className="contact__card-data">437-770-9365</span>
 
-                        <a href="" className="contact__button">Talk to me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        <a href="tel:+14377709365" className="contact__button">Talk to me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                 </div>
             </div>
 
             <div className="contact__content">
-                <h3 className="contact__title"></h3>
+                <h3 className="contact__title">Send a message</h3>
 
                 <form ref={form} onSubmit={sendEmail} className="contact__form">
                     <div className="contact__form-div">
@@ -63,7 +63,7 @@ const Contact = () => {
 
                     <button className="button button--flex">Send Message
             <svg
-                  class="button__icon"
+                  className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
