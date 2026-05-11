@@ -1,39 +1,35 @@
 import React from 'react';
 import './about.css';
-import CV from '../../assets/Arjun_Sidhu_Resume_2026grad.pdf';
+import CV from '../../assets/Arjun_Sidhu_Resume_AI.pdf';
 import AbiEmployeesVideo from '../../assets/ABI_Employees_test.mp4';
 
 const workExperience = [
   {
-    role: 'Automation Developer / Solutions Engineer (Co-op)',
-    org: 'MPBSDP',
+    role: 'Software Engineer (Co-op)',
+    org: 'Ministry of Public and Business Service Delivery and Procurement (MPBSDP)',
     date: 'Jan 2025 - Aug 2025',
     bullets: [
-      'Led client discovery sessions to identify automation opportunities.',
-      'Built Power Apps, Power Automate, and SharePoint workflows for internal teams.',
-      'Developed enterprise apps that centralized intake and reporting.',
-      'Delivered end-to-end automations that reduced manual processing.'
+      'Built internal workflow platforms used by 15+ stakeholders, reducing manual processing time by ~45% across reporting, CRM, approvals, and call tracking workflows.',
+      'Translated ambiguous business workflows into production requirements, data models, and automated systems using Power Apps, Power Automate, and SharePoint.'
     ]
   },
   {
-    role: 'Automation Developer (Co-op)',
+    role: 'Software Engineer (Co-op)',
     org: 'Ontario Ministry of Transportation (MTO)',
     date: 'May 2024 - Aug 2024',
     bullets: [
-      'Mapped business processes and designed Power Automate workflows.',
-      'Built Power Apps forms with SharePoint-integrated approvals.',
-      'Prototyped Power Platform solutions for digital transformation projects.'
+      'Designed and shipped internal automation tools for approval routing, data collection, and workflow management using Power Platform.',
+      'Reduced manual processing time by ~50% by replacing repetitive business processes with automated forms, routing logic, and reporting workflows.'
     ]
   },
   {
-    role: 'Junior Technical Analyst (Co-op)',
+    role: 'AI/ML Developer (Co-op)',
     org: 'Ontario Ministry of Transportation (MTO)',
     date: 'Sep 2023 - Dec 2023',
     bullets: [
-      'Built a Python analytics assistant for natural-language data queries.',
-      'Implemented Azure OpenAI text-to-SQL for PostgreSQL reporting.',
-      'Secured project API budget through leadership presentations.',
-      'Improved output quality with prompt-engineering and model tuning.'
+      'Built an Azure OpenAI text-to-SQL system enabling natural language querying of PostgreSQL databases, handling prompt construction, query parsing, and result formatting.',
+      'Developed a Streamlit AI assistant for automated data retrieval, analysis, and structured reporting from internal datasets.',
+      'Improved response accuracy and reduced API cost by ~20% through prompt engineering and optimization.'
     ]
   }
 ];
@@ -74,7 +70,7 @@ const About = () => {
 
         <div className="about__actions">
           <a href={CV} target="_blank" rel="noreferrer" className="button button--flex">
-            View Resume (2026)
+            View Resume
             <svg
               className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
